@@ -13,9 +13,9 @@ run: libs
 	hpack
 	LD_LIBRARY_PATH=c/1_hello:c/2_fpow:c/4_scalarmul cabal run
 
-libs: libhello.a libfpow.a libscalarmul.a
+libs: libhello.so libfpow.so libscalarmul.so
 
-libhello.a:
+libhello.so:
 	# compile c code
 	gcc -g -Wall -fPIC -lgfortran -c -o c/1_hello/lib.o c/1_hello/lib.c
 	# compile fortran code
@@ -23,7 +23,7 @@ libhello.a:
 	# dynamic linking
 	gcc -shared -o c/1_hello/libhello.so c/1_hello/lib.o c/1_hello/hello.o
 
-libfpow.a:
+libfpow.so:
 	# compile c code
 	gcc -g -Wall -lgfortran -c -o c/2_fpow/lib.o c/2_fpow/lib.c
 	# compile fortran code
@@ -32,7 +32,7 @@ libfpow.a:
 	gcc -shared -o c/2_fpow/libfpow.so c/2_fpow/lib.o c/2_fpow/fpow.o
 
 
-libscalarmul.a:
+libscalarmul.so:
 	# compile c code
 	gcc -g -Wall -lgfortran -c -o c/4_scalarmul/lib.o c/4_scalarmul/lib.c
 	# compile fortran code

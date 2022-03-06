@@ -75,7 +75,7 @@ transpose m = let
 
 
 --------------------------------------------------
--- * 4) Mat-Vec multiplication.
+-- * 4) Mat * Scalar multiplication.
 --
 -- Demonstrates interfacing between Fortran and HMatrix. Fortran uses
 -- colum-major arrays, so, HMatrix can correct that with `fmat`.
