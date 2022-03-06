@@ -50,9 +50,9 @@ The best place to start is in [`src/Main.hs`](https://github.com/freckletonj/has
 
 ```
 extra-lib-dirs:
-  - EDIT_ME_TO_ABSOLUTE_PATH/c/1_hello
-  - EDIT_ME_TO_ABSOLUTE_PATH/c/2_fpow
-  - EDIT_ME_TO_ABSOLUTE_PATH/c/4_scalarmul
+  - EDIT_ME_TO_ABSOLUTE_PATH/haskell-fortran/c/1_hello
+  - EDIT_ME_TO_ABSOLUTE_PATH/haskell-fortran/c/2_fpow
+  - EDIT_ME_TO_ABSOLUTE_PATH/haskell-fortran/c/4_scalarmul
 ```
 
 2. And we're off!

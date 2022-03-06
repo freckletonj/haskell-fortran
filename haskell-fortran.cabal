@@ -6,6 +6,8 @@ cabal-version: 1.12
 
 name:           haskell-fortran
 version:        0.0.0
+license:        BSD2
+license-file:   LICENSE
 build-type:     Simple
 
 library
@@ -20,9 +22,9 @@ library
   c-sources:
       c/3_transpose/lib.c
   extra-lib-dirs:
-      EDIT_ME_TO_ABSOLUTE_PATH/c/1_hello
-      EDIT_ME_TO_ABSOLUTE_PATH/c/2_fpow
-      EDIT_ME_TO_ABSOLUTE_PATH/c/4_scalarmul
+      EDIT_ME_TO_ABSOLUTE_PATH/haskell-fortran/c/1_hello
+      EDIT_ME_TO_ABSOLUTE_PATH/haskell-fortran/c/2_fpow
+      EDIT_ME_TO_ABSOLUTE_PATH/haskell-fortran/c/4_scalarmul
   extra-libraries:
       hello
       fpow
@@ -44,9 +46,9 @@ executable main
   c-sources:
       c/3_transpose/lib.c
   extra-lib-dirs:
-      EDIT_ME_TO_ABSOLUTE_PATH/c/1_hello
-      EDIT_ME_TO_ABSOLUTE_PATH/c/2_fpow
-      EDIT_ME_TO_ABSOLUTE_PATH/c/4_scalarmul
+      EDIT_ME_TO_ABSOLUTE_PATH/haskell-fortran/c/1_hello
+      EDIT_ME_TO_ABSOLUTE_PATH/haskell-fortran/c/2_fpow
+      EDIT_ME_TO_ABSOLUTE_PATH/haskell-fortran/c/4_scalarmul
   extra-libraries:
       hello
       fpow
