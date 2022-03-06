@@ -67,7 +67,7 @@ transpose m = let
   nrow = rows m
   ncol = cols m
   in unsafePerformIO $ do
-  -- allocate some memory
+  -- allocate some memory for the output matrix
   m' <- createMatrix RowMajor ncol nrow
   -- apply function to memory locations
   () <- (m #! m') transpose_ #| "transpose_"
