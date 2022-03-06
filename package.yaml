@@ -1,0 +1,34 @@
+name: haskell-fortran
+
+dependencies:
+- base >= 4.7 && < 5
+
+executables:
+  main:
+    source-dirs: src
+    main: Main.hs
+    dependencies:
+      - hmatrix
+
+library:
+  source-dirs: src
+  dependencies:
+    - hmatrix
+
+# 3_transpose doesn't need fortran, so GHC can link to the C files directly and
+# automatically handles compiling them.
+include-dirs: c/3_transpose
+c-sources: c/3_transpose/lib.c
+
+# These libraries link to Fortran code, so must be compiled into C objects, and
+# then archived into libraries using `ar`.
+extra-lib-dirs:
+  - EDIT_ME_TO_ABSOLUTE_PATH/c/1_hello
+  - EDIT_ME_TO_ABSOLUTE_PATH/c/2_fpow
+  - EDIT_ME_TO_ABSOLUTE_PATH/c/4_scalarmul
+
+extra-libraries:
+  - hello
+  - fpow
+  - scalarmul
+  - gfortran
