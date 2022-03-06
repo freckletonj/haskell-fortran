@@ -31,7 +31,7 @@ This project builds up an example, step by step, for how to use Haskell's FFI, a
 
 ## The Demos
 
-The best place to start is in `src/Main.hs`. In it you'll find:
+The best place to start is in [`src/Main.hs`](https://github.com/freckletonj/haskell-fortran/blob/master/src/Main.hs). In it you'll find:
 
 0. An demo for getting the `exp` function out of C's stdio.
 
