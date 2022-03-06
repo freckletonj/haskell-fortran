@@ -105,6 +105,8 @@ make run
 
 * HMatrix's `Matrix` type looks like [this](https://hackage.haskell.org/package/hmatrix-0.20.2/docs/src/Internal.Matrix.html#Matrix) with extra params for the sliced width and height (`irows` and `icols`). It's important when writing algorithms to remember that the dimensions of the array in memory may differ from the slice under consideration, so, your algorithm can be dramatically off if you're not careful. The library has poor documentation for this type, so perhaps the [`subMatrix`](https://hackage.haskell.org/package/hmatrix-0.20.2/docs/src/Internal.Matrix.html#subMatrix) algorithm is the best explication of what's going on with the extra params in a `Matrix`.
 
+* HMatrix has some weird `TransArray` stuff. To get your head around it, consider an example they wrote: [`.hs`](https://github.com/haskell-numerics/hmatrix/blob/master/examples/devel/example/wrappers.hs), [`.c`](https://github.com/haskell-numerics/hmatrix/blob/master/examples/devel/example/functions.c).
+
 ## My Questions
 
 - Could I get a code review around some of the C, Makefile, and Fortran? I'm a total noob to all 3.
